@@ -75,6 +75,8 @@ python manage.py runserver
 
 - PUT /api/companies/1/ → Update a company
 
+- DELETE /api/companies/delete/1/ → Delete Company details
+
 - GET /api/jobs/ → List all jobs
 
 - POST /api/jobs/ → Create a job
@@ -82,3 +84,7 @@ python manage.py runserver
 - GET /api/jobs/?company=1 → Filter jobs by company
 
 - GET /api/jobs/1/ → Job detail
+
+- PUT /api/jobs/update/1/ → Update Job detail
+
+- DELETE /api/jobs/delete/1/ → Delete Job detail
