@@ -10,6 +10,12 @@ class CompanyListCreateAPIView(generics.ListCreateAPIView):
 class CompanyRetrieveUpdateAPIView(generics.RetrieveUpdateAPIView):
     queryset = Company.objects.all()
     serializer_class = CompanySerializer
+    lookup_field = 'pk'
+    
+class CompanyDeleteAPIView(generics.DestroyAPIView):
+    queryset = Company.objects.all()
+    serializer_class = CompanySerializer
+    lookup_field = 'pk'
 
 class JobPostListCreateAPIView(generics.ListCreateAPIView):
     serializer_class = JobPostSerializer
@@ -23,3 +29,9 @@ class JobPostListCreateAPIView(generics.ListCreateAPIView):
 class JobPostRetrieveAPIView(generics.RetrieveAPIView):
     queryset = JobPost.objects.all()
     serializer_class = JobPostSerializer
+    lookup_field = 'pk'
+    
+class JobPostDeleteAPIView(generics.DestroyAPIView):
+    queryset = JobPost.objects.all()
+    serializer_class = JobPostSerializer
+    lookup_field = 'pk'   
